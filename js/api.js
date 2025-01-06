@@ -1,4 +1,4 @@
-// js/api.js
+
 
 const API_URL = 'https://jsonplaceholder.typicode.com';
 
@@ -18,7 +18,7 @@ export async function getPosts() {
 
 export async function createPost(postData) {
   try {
-    // Simulate successful POST request
+    
     const response = await fetch(`${API_URL}/posts`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -37,7 +37,7 @@ export async function createPost(postData) {
 
 export async function updatePost(id, postData) {
   try {
-    // Simulate successful PUT request
+    
     const response = await fetch(`${API_URL}/posts/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
