@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A Very Simple Blog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>A Simple Blog(SBA 308A)</h1>
+    <input type="text" id="search-input" placeholder="Search posts...">
+  </header>
+  <main>
+    <section id="new-post">
+      <h2>Create New Post</h2>
+      <form id="post-form">
+        <input type="text" id="post-title" placeholder="Title" required>
+        <textarea id="post-body" placeholder="Body" required></textarea>
+        <button type="submit">Create Post</button>
+      </form>
+    </section>
+    <section id="posts-container"></section>
+  </main>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
