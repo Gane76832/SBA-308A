@@ -1,4 +1,4 @@
-// js/ui.js
+
 
 import { createPost, updatePost } from './api.js';
 
@@ -36,13 +36,13 @@ function setupEventListeners() {
   const postForm = document.getElementById('post-form');
   const searchInput = document.getElementById('search-input');
 
-  // Event listener for post buttons
+  // The event listener for post buttons
   postsContainer.addEventListener('click', handlePostButtons);
 
-  // Event listener for form submission
+  
   postForm.addEventListener('submit', handleFormSubmit);
 
-  // Event listener for search input
+  
   searchInput.addEventListener('input', handleSearchInput);
 }
 
@@ -98,16 +98,16 @@ async function handleFormSubmit(event) {
   try {
     if (isEditing && currentPostId) {
       const updatedPostData = { title, body };
-      // Since JSONPlaceholder doesn't update, we simulate it
+      
       const updatedPost = { ...updatedPostData, id: Number(currentPostId) };
 
-      // Update local posts array
+      
       const index = allPosts.findIndex((p) => p.id == currentPostId);
       if (index !== -1) {
         allPosts[index] = updatedPost;
       }
 
-      await updatePost(currentPostId, updatedPostData); // Simulate API call
+      await updatePost(currentPostId, updatedPostData); 
 
       isEditing = false;
       currentPostId = null;
@@ -116,13 +116,13 @@ async function handleFormSubmit(event) {
       const newPostData = { title, body };
       const newPost = await createPost(newPostData);
 
-      // Assign a unique ID since JSONPlaceholder returns id 101 for new posts
+      // Assign a unique ID since the JSONPlaceholder returns id 101 for new posts
       newPost.id = allPosts.length ? Math.max(...allPosts.map((p) => p.id)) + 1 : 1;
 
       allPosts.unshift(newPost);
     }
 
-    // Reset form
+    
     titleInput.value = '';
     bodyInput.value = '';
 
