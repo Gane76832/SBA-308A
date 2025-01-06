@@ -126,7 +126,7 @@ async function handleFormSubmit(event) {
     titleInput.value = '';
     bodyInput.value = '';
 
-    // Refresh posts display
+    // Refresh the posts display
     displayPosts(allPosts);
   } catch (error) {
     console.error('Error submitting the form:', error);
