@@ -1,4 +1,3 @@
-// js/main.js
 
 import { getPosts } from './api.js';
 import { initializeUI } from './ui.js';
